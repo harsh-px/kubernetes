@@ -261,8 +261,11 @@ func makePodSourceConfig(kubeCfg *componentconfig.KubeletConfiguration, kubeDeps
 		glog.Infof("Adding manifest url %q with HTTP header %v", kubeCfg.ManifestURL, manifestURLHeader)
 		config.NewSourceURL(kubeCfg.ManifestURL, manifestURLHeader, nodeName, kubeCfg.HTTPCheckFrequency.Duration, cfg.Channel(kubetypes.HTTPSource))
 	}
+
+	glog.Infof("[hdesai] log")
+
 	if kubeDeps.KubeClient != nil {
-		glog.Infof("Watching apiserver")
+		glog.Infof("[hdesai] Watching apiserver")
 		config.NewSourceApiserver(kubeDeps.KubeClient, nodeName, cfg.Channel(kubetypes.ApiserverSource))
 	}
 	return cfg, nil
