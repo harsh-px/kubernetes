@@ -1229,6 +1229,9 @@ func (ctrl *PersistentVolumeController) provisionClaim(claim *v1.PersistentVolum
 	if !ctrl.enableDynamicProvisioning {
 		return nil
 	}
+
+	glog.Infof("[hdesai] provisionClaim[%s]: started", claimToClaimKey(claim))
+
 	glog.V(4).Infof("provisionClaim[%s]: started", claimToClaimKey(claim))
 	opName := fmt.Sprintf("provision-%s[%s]", claimToClaimKey(claim), string(claim.UID))
 	ctrl.scheduleOperation(opName, func() error {
