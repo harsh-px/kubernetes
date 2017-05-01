@@ -108,7 +108,7 @@ func serveInsecurely(insecureServingInfo *InsecureServingInfo, insecureHandler h
 		Handler:        insecureHandler,
 		MaxHeaderBytes: 1 << 20,
 	}
-	glog.Infof("[hdesai] Serving insecurely on %s", insecureServingInfo.BindAddress)
+	glog.Infof("Serving insecurely on %s", insecureServingInfo.BindAddress)
 	var err error
 	_, err = server.RunServer(insecureServer, insecureServingInfo.BindNetwork, stopCh)
 	return err

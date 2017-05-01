@@ -175,7 +175,6 @@ func (le *LeaderElector) IsLeader() bool {
 
 // acquire loops calling tryAcquireOrRenew and returns immediately when tryAcquireOrRenew succeeds.
 func (le *LeaderElector) acquire() {
-	glog.Infof("[hdesai] log")
 	stop := make(chan struct{})
 	glog.Infof("attempting to acquire leader lease...")
 	wait.JitterUntil(func() {
