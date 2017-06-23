@@ -1678,27 +1678,27 @@
 		},
 		{
 			"ImportPath": "github.com/libopenstorage/openstorage/api",
-			"Rev": "6e787003b91ddba85f108b8aede075b1af0d3606"
+			"Rev": "edcb0f1855dd66ad173c3bbbedc5196de17473b7"
 		},
 		{
 			"ImportPath": "github.com/libopenstorage/openstorage/api/client",
-			"Rev": "6e787003b91ddba85f108b8aede075b1af0d3606"
+			"Rev": "edcb0f1855dd66ad173c3bbbedc5196de17473b7"
 		},
 		{
 			"ImportPath": "github.com/libopenstorage/openstorage/api/client/volume",
-			"Rev": "6e787003b91ddba85f108b8aede075b1af0d3606"
+			"Rev": "edcb0f1855dd66ad173c3bbbedc5196de17473b7"
 		},
 		{
 			"ImportPath": "github.com/libopenstorage/openstorage/api/spec",
-			"Rev": "6e787003b91ddba85f108b8aede075b1af0d3606"
+			"Rev": "edcb0f1855dd66ad173c3bbbedc5196de17473b7"
 		},
 		{
 			"ImportPath": "github.com/libopenstorage/openstorage/pkg/units",
-			"Rev": "6e787003b91ddba85f108b8aede075b1af0d3606"
+			"Rev": "edcb0f1855dd66ad173c3bbbedc5196de17473b7"
 		},
 		{
 			"ImportPath": "github.com/libopenstorage/openstorage/volume",
-			"Rev": "6e787003b91ddba85f108b8aede075b1af0d3606"
+			"Rev": "edcb0f1855dd66ad173c3bbbedc5196de17473b7"
 		},
 		{
 			"ImportPath": "github.com/lpabon/godbc",
