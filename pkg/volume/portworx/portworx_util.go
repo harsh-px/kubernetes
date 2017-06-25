@@ -58,6 +58,9 @@ func (util *PortworxVolumeUtil) CreateVolume(p *portworxVolumeProvisioner) (stri
 	if err != nil {
 		return "", 0, nil, err
 	}
+	glog.Infof("[px-debug] block size: %v\n", spec.BlockSize)
+	glog.Infof("[px-debug] snap interval: %v\n", spec.SnapshotInterval)
+
 	spec.Size = uint64(requestGB * 1024 * 1024 * 1024)
 	source := osdapi.Source{}
 	locator := osdapi.VolumeLocator{
