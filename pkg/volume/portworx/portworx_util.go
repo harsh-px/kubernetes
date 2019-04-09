@@ -24,7 +24,7 @@ import (
 	volumeclient "github.com/libopenstorage/openstorage/api/client/volume"
 	osdspec "github.com/libopenstorage/openstorage/api/spec"
 	volumeapi "github.com/libopenstorage/openstorage/volume"
-	"k8s.io/api/core/v1"
+	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	volumehelpers "k8s.io/cloud-provider/volume/helpers"
@@ -72,10 +72,9 @@ func (util *portworxVolumeUtil) CreateVolume(p *portworxVolumeProvisioner) (stri
 	}
 
 	// Pass all parameters as volume labels for Portworx server-side processing
-	if len(p.options.Parameters) > 0 {
-		spec.VolumeLabels = p.options.Parameters
-	} else {
-		spec.VolumeLabels = make(map[string]string, 0)
+	spec.VolumeLabels = make(map[string]string, 0)
+	for k, v := range p.options.Parameters {
+		spec.VolumeLabels[k] = v
 	}
 
 	// Update the requested size in the spec
